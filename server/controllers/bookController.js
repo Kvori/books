@@ -14,8 +14,8 @@ class BookController {
         let limits = 20
 
         if (page && Number(page) !== 1) {
-            startedId = 21 + (page - 2) * limits
             limits = 10
+            startedId = 21 + (page - 2) * limits
         }
 
         const { books } = new BookListCreator({language, seed, likesCount, reviewsCount, limits, startedId})
